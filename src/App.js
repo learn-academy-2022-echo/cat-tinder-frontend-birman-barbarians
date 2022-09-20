@@ -9,7 +9,7 @@ import CatNew from "./pages/CatNew"
 import CatShow from "./pages/CatShow"
 import Home from "./pages/Home"
 import NotFound from "./pages/NotFound"
-import MockCats from "./MockCats"
+import mockCats from "./assets/MockCats"
 
 const App = () => {
   return (

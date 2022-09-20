@@ -1,20 +1,12 @@
 import React from 'react'
-import { NavLink } from "react-router-dom"
-import {Nav,NavItem} from 'reactstrap';
+import {Nav, NavItem} from 'reactstrap';
 
 
 const Header = () => {
   return (
-  <Nav
-  fill
-  pills
->
+<Nav fill pills>
   <NavItem>
-    <a
-      href="/catindex"
-    >
-      See All The Cats
-    </a>
+    <a href="/catindex">See All The Cats</a>
   </NavItem>
   <NavItem>
     <a href="/catshow">
@@ -22,17 +14,10 @@ const Header = () => {
     </a>
   </NavItem>
   <NavItem>
-    <a href="/catnew">
-      Add A Cat
-    </a>
+    <a href="/catnew">Add A Cat</a>
   </NavItem>
   <NavItem>
-    <a
-      
-      href="/catedit"
-    >
-      Edit A Cat
-    </a>
+    <a href="/catedit">Edit A Cat</a>
   </NavItem>
 </Nav>
   )
