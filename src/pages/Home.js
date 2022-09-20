@@ -1,9 +1,9 @@
 import React from 'react'
-import mockCats from "./assets/MockCats"
+// import mockCats from "./MockCats"
 
 const Home = () => {
     return (
-        <h1>Home</h1>
+        <h1>Welcome to Cat Tinder</h1>
     )
 }
 

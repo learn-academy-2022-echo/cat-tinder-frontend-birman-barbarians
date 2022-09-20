@@ -4,6 +4,7 @@ import {Alert} from "reactstrap"
 const NotFound = () => {
     return (
         <>
+      <h1>Something Happened</h1>
   <Alert>
     <h4 className="alert-heading">
       Something went wrong!
