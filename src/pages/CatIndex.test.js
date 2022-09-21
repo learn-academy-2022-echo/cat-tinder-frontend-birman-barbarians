@@ -13,6 +13,7 @@ describe("<CatIndex/>", () => {
 
 
         )
+        // testing moving branches
         // const main = document.createElement("main")
         //     render(<CatIndex cats={mockCatsArray} />, main)
                 mockCatsArray.forEach((cat) => {
