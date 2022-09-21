@@ -8,11 +8,11 @@ const Header = () => {
   <NavItem>
     <a href="/catindex">See All The Cats</a>
   </NavItem>
-  <NavItem>
+  {/* <NavItem>
     <a href="/catshow">
       See A Cat Here
     </a>
-  </NavItem>
+  </NavItem> */}
   <NavItem>
     <a href="/catnew">Add A Cat</a>
   </NavItem>

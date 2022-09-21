@@ -3,8 +3,15 @@ import {Card, CardBody, CardTitle, CardText, CardImg} from "reactstrap"
 const Footer = () => {
     return (
         <>
-        <Card className="my-2">
-        <CardBody>
+        <Card className="Footer">
+        <CardBody className="FooterBody"
+                style={{position: "fixed",
+                left:0,
+                bottom:0,
+                right:0,
+                height: "10%",
+                width: "100%"}}
+        >
           <CardTitle tag="h5">
             Cat Tinder
           </CardTitle>
@@ -16,16 +23,6 @@ const Footer = () => {
             </small>
           </CardText>
         </CardBody>
-        <CardImg
-          alt="Card image cap"
-          bottom
-          src="https://images4.alphacoders.com/105/thumb-1920-1056029.jpg"
-          style={{
-            height: 300
-          }}
-          width="100%"
-          
-        />
       </Card>
     </>
     )
