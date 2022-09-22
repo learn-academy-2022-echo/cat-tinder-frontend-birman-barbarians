@@ -7,12 +7,12 @@ describe("<CatIndex/>", () => {
     test("render without crashing", () => {
         render(
             <BrowserRouter>
-            <CatIndex cats={mockCatsArray}/>
+                <CatIndex cats={mockCatsArray}/>
             </BrowserRouter>
         )
-                mockCatsArray.forEach((cat) => {
-                    const catName = screen.getByText(cat.name)
-                    expect(catName).toBeInTheDocument()
-                })
+            mockCatsArray.forEach((cat) => {
+                const catName = screen.getByText(cat.name)
+                expect(catName).toBeInTheDocument()
+        })
     })
 })
