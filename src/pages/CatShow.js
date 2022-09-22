@@ -39,10 +39,7 @@ const CatShow = ({cats}) => {
                                     </NavLink>
                             </CardBody>
                     </Card>
-        
         </>
-
-
     )
 }
 

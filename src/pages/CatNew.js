@@ -3,6 +3,7 @@ import {InputGroup, InputGroupText, Input, Button} from 'reactstrap'
 import { useNavigate } from "react-router-dom"
 
 const CatNew = ({ createCat }) => {
+    const navigate = useNavigate()
     const [newCat, setNewCat] = useState({
         name: "",
         age: "",
@@ -12,7 +13,6 @@ const CatNew = ({ createCat }) => {
     const handleCats = (e) => {
         setNewCat({...newCat, [e.target.name]: e.target.value})
     }
-        const navigate = useNavigate()
         const backToHome = () => {
             createCat(newCat)
             navigate("/catindex")
@@ -77,7 +77,7 @@ const CatNew = ({ createCat }) => {
                 onClick={backToHome}
             >
                 Submit
-        </Button>
+            </Button>
             </div>
         </>
     )
