@@ -5,17 +5,11 @@ import { BrowserRouter } from 'react-router-dom'
 
 describe("<CatIndex/>", () => {
     test("render without crashing", () => {
-        // Arrange
         render(
             <BrowserRouter>
             <CatIndex cats={mockCatsArray}/>
             </BrowserRouter>
-
-
         )
-        // testing moving branches
-        // const main = document.createElement("main")
-        //     render(<CatIndex cats={mockCatsArray} />, main)
                 mockCatsArray.forEach((cat) => {
                     const catName = screen.getByText(cat.name)
                     expect(catName).toBeInTheDocument()
