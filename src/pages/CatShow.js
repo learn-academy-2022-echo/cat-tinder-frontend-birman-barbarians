@@ -1,7 +1,7 @@
 import React from 'react'
-import { useParams, UseParams } from 'react-router-dom'
+import { useParams} from 'react-router-dom'
 import {Card, CardBody, CardTitle, CardSubtitle, CardText, Button} from 'reactstrap'
-
+import { NavLink } from 'react-router-dom'
 
 const CatShow = ({cats}) => {
     const { id } = useParams()
@@ -10,7 +10,7 @@ const CatShow = ({cats}) => {
     return (
         <>
         <h1>CatShow</h1>
-        <Card
+                    <Card
                             style={{
                                 width: '18rem'
                             }}
@@ -21,26 +21,24 @@ const CatShow = ({cats}) => {
                             />
                             <CardBody>
                                 <CardTitle tag="h5">
-                                {currentCat.name}
+                                     {currentCat.name}
                                 </CardTitle>
                                 <CardSubtitle
-                                className="mb-2 text-muted"
-                                tag="h6"
-                                >
-                                {currentCat.age}
+                                    className="mb-2 text-muted"
+                                    tag="h6"
+                                    >
+                                    {currentCat.age}
                                 </CardSubtitle>
                                 <CardText>
-                                {currentCat.enjoys}
+                                    {currentCat.enjoys}
                                 </CardText>
-                                <Button>
-                                Button
-                                </Button>
+                                <NavLink to={"/catindex"} className="nav-link">
+                                        <Button>
+                                        Back To Home
+                                        </Button>
+                                    </NavLink>
                             </CardBody>
-                            </Card>
-        
-        
-        
-        
+                    </Card>
         
         </>
 

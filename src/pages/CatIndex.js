@@ -4,16 +4,12 @@ import { NavLink } from 'react-router-dom'
 
 
 const CatIndex = ({cats}) => {
-
-    return (
-        
-  
-            <main> 
-                <h1>Cat Index</h1>
+return (
+        <main> 
+            <h1>Cat Index</h1>
                 {cats.map((cat, index) => {
                     return(
                         <>
-  
                             <Card
                                 style={{
                                     width: '18rem'
@@ -45,11 +41,10 @@ const CatIndex = ({cats}) => {
 
                                 </CardBody>
                             </Card>
-
                         </>
                     )
                 })}
-            </main>
+         </main>
     )
 }
 

@@ -1,5 +1,4 @@
 import { render, screen } from "@testing-library/react"
-
 import { MemoryRouter, Route, Routes } from "react-router-dom"
 import CatShow from "./CatShow"
 import mockCatsArray from "../MockCats";
