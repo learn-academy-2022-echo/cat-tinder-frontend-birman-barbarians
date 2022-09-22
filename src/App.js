@@ -9,20 +9,28 @@ import CatNew from "./pages/CatNew"
 import CatShow from "./pages/CatShow"
 import Home from "./pages/Home"
 import NotFound from "./pages/NotFound"
+import mockCatsArray from './MockCats'
 
 const App = () => {
+
+const [cats, setCats] = useState(mockCatsArray)
+
   return (
     <>
   <Header />
   <Routes>
       <Route path="/" element={<Home />} />
-      <Route path="/catindex" element={<CatIndex />} />
-      <Route path="/catshow" element={<CatShow />} />
+      <Route path="/catindex" element={<CatIndex cats={cats} />} />
+      <Route path="/catshow/:id" element={<CatShow cats={cats} />} />
       <Route path="/catnew" element={<CatNew />} />
       <Route path="/catedit" element={<CatEdit />} />
       <Route path="*" element={<NotFound />} />
     </Routes>
+
+{/* Places the Footer at the Bottom, Fixed */}
+
   <Footer/>
+
   </>
   );
 }

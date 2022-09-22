@@ -1,4 +1,4 @@
-const mockCats = [
+const mockCatsArray = [
     {
       id: 1,
       name: "Marshmallow",
@@ -24,4 +24,4 @@ const mockCats = [
         "https://pbs.twimg.com/media/EbipAYVWAAAPBYo.jpg"
     }
   ]
-  export default mockCats
+  export default mockCatsArray
