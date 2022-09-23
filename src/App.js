@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React, { useState, useEffect } from "react"
 import { Routes, Route } from "react-router-dom"
 import './App.css';
 import Footer from "./components/Footer"
@@ -9,19 +9,61 @@ import CatNew from "./pages/CatNew"
 import CatShow from "./pages/CatShow"
 import Home from "./pages/Home"
 import NotFound from "./pages/NotFound"
-import mockCatsArray from './MockCats'
+
 
 const App = () => {
 
-const [cats, setCats] = useState(mockCatsArray)
+const [cats, setCats] = useState([])
+
+useEffect(() => {
+  readCat()
+}, [])
+
+const readCat = () => {
+  fetch("http://localhost:3000/cats")
+  .then((response) => response.json())
+  .then((payload) => {
+    setCats(payload)
+  })
+  .catch((error) => console.log(error))
+}
 
 const createCat = (cat) => {
-  console.log(cat)
+  fetch("http://localhost:3000/cats", {
+    body: JSON.stringify(cat),
+    headers: {
+      'Content-Type':'application/json'
+    },
+    method: 'POST'
+  })
+    .then((response) => response.json())
+    .then((payload) => readCat())
+    .catch((errors) => console.log(errors))
 }
 
 const updateCat = (cat, id) => {
-  console.log("cat:", cat)
-  console.log("id:", id)
+  fetch(`http://localhost:3000/cats/${id}`, {
+    body: JSON.stringify(cat), 
+    headers: {
+      "Content-Type":"application/json"
+    },
+    method: "PATCH"
+  })
+  .then((response) => response.json())
+  .then((payload) => readCat())
+  .catch((errors) => console.log(errors))
+}
+
+const deleteCat = (id) => {
+  fetch(`http://localhost:3000/cats/${id}`, {
+    headers: {
+      "Content-Type": "application/json"
+    },
+    method: "DELETE"
+  })
+    .then((response) => response.json())
+    .then((payload) => this.readCat())
+    .catch((errors) => console.log("delete errors:", errors))
 }
 
   return (

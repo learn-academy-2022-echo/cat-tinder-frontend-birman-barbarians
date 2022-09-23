@@ -40,6 +40,9 @@ const CatShow = ({cats}) => {
                     <NavLink to={`/catedit/${currentCat.id}`} className="nav-link">
                         Edit Cat Profile
                     </NavLink>
+                    <NavLink to={"/catindex"} className="nav-link">
+                        Delete A Cat Profile
+                    </NavLink>
             </CardBody>
         </Card>
         </>
