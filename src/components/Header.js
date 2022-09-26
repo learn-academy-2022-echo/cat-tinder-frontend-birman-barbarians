@@ -1,19 +1,32 @@
 import React from 'react'
 import {Nav, NavItem} from 'reactstrap';
+import catlogo from '../assets/catt.png'
 
 
 const Header = () => {
   return (
-    <Nav fill pills>
+    <Nav className='Nav' fill pills>
       <NavItem>
-        <a href="/catindex">See All The Cats</a>
+        <a style={{
+          textDecoration: 'none',
+          color:'#662424',
+          paddingleft:"2em"}} href="/">
+          <img className='Logo' src={catlogo}></img> Cat Tinder
+        </a>
       </NavItem>
-      <NavItem>
-        <a href="/catnew">Add A Cat</a>
+
+      <NavItem className='OtherNav'>
+        <a style={{
+          textDecoration: 'none',
+          color:'#662424'}} href="/catindex">See All The Cats</a>
       </NavItem>
-      <NavItem>
-        <a href="/catedit">Edit A Cat</a>
+
+      <NavItem className='OtherNav'>
+        <a style={{
+          textDecoration: 'none',
+          color:'#662424'}} href="/catnew">Add A Cat</a>
       </NavItem>
+
     </Nav>
   )
 }

@@ -9,11 +9,10 @@ const Footer = () => {
                 left:0,
                 bottom:0,
                 right:0,
-                height: "10%",
+                height: "6%",
                 width: "100%"}}
         >
           <CardTitle tag="h5">
-            Cat Tinder
           </CardTitle>
           <CardText>
             Cat Tinder Project by Jereme Doan and Sam Scott
