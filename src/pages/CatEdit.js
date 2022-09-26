@@ -22,10 +22,14 @@ const CatEdit = ({ cats, updateCat }) => {
     }
     return (
         <>
+        <div className='Title'>
         <h1>Update A Cat Here</h1>
+        </div>
+
+        <div className='NewForm'>
         <Row>
     <Col md={6}>
-      <FormGroup>
+      <FormGroup className='FirstInput'>
         <Label for="name">
           Name
         </Label>
@@ -40,7 +44,7 @@ const CatEdit = ({ cats, updateCat }) => {
       </FormGroup>
     </Col>
     <Col md={6}>
-      <FormGroup>
+      <FormGroup className='FirstInput'>
         <Label for="age">
           Age
         </Label>
@@ -55,6 +59,7 @@ const CatEdit = ({ cats, updateCat }) => {
       </FormGroup>
     </Col>
   </Row>
+  
   <FormGroup>
     <Label for="enjoys">
       What do they like?
@@ -84,6 +89,7 @@ const CatEdit = ({ cats, updateCat }) => {
     <Button onClick={handleSubmit} name="submit">
         Submit Updated Cat
     </Button>
+    </div>
         </>
     )
 }

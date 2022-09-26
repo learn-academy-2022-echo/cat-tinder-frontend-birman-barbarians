@@ -3,10 +3,15 @@ import { useParams} from 'react-router-dom'
 import {Card, CardBody, CardTitle, CardSubtitle, CardText, Button} from 'reactstrap'
 import { NavLink } from 'react-router-dom'
 
-const CatShow = ({cats}) => {
+const CatShow = ({cats, deleteCat}) => {
     const { id } = useParams()
     let currentCat = cats.find((cat) => cat.id === +id)
     console.log(currentCat)
+
+const handleDelete = () => {
+    deleteCat(id)
+    console.log(currentCat)
+}
     return (
         <>
         <h1>CatShow</h1>
@@ -33,15 +38,17 @@ const CatShow = ({cats}) => {
                     {currentCat.enjoys}
                 </CardText>
                 <NavLink to={"/catindex"} className="nav-link">
-                        <Button>
+                        <Button className='Button'>
                         Back To Home
                         </Button>
                     </NavLink>
                     <NavLink to={`/catedit/${currentCat.id}`} className="nav-link">
-                        Edit Cat Profile
+                        <Button className='Button'>
+                            Edit Cat Profile
+                        </Button>
                     </NavLink>
                     <NavLink to={"/catindex"} className="nav-link">
-                        Delete A Cat Profile
+                        <Button className='Button' onClick={handleDelete}>Delete A Cat Profile</Button>
                     </NavLink>
             </CardBody>
         </Card>

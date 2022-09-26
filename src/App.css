@@ -1,16 +1,194 @@
+@import url('https://fonts.googleapis.com/css2?family=Cantarell&family=Poppins:wght@200&display=swap');
+
 .HTMLBody{
   background-color: #f0d597;
   height: 100%;
   width: 100%;
+  font-family:'Poppins', sans-serif;
+  background-image: url('../../yarnball_bg.jpeg');
 }
 
 
 .CatProfile{
   background-size: cover;
   height: 250px ;
-  width: 250px ;
+  width: auto ;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+/* Header / Nav */
+.Logo{
+  width: 100px;
+  margin-left: 0;
+}
+.Nav{
+  max-width:1980px;
+  white-space: nowrap;
+  background-color: #f3aa89;
+  padding-right: 3em;
+}
+.OtherNav{
+  padding-top: 6px;
+}
+a{
+  font-size: 25px;
+}
+.BannerBigMessage{
 
 }
+
+/* Home */
+.Banner{
+  display:grid;
+  /* background: unset; */
+  grid-template-columns: 66% auto;
+  background-color: white;
+  color:#997b59; 
+  border-radius: 5em;
+  width: 1700px;
+  /* border-style: dotted; */
+  padding-left: 100px;
+  margin-left: 100px;
+  
+}
+
+.Banner h2{
+  color:brown;
+  padding-top: 200px;
+  /* border-style: dotted; */
+  text-align: left;
+  font-size: 45px;
+}
+
+.Banner h8{
+ color:red;
+ font-size: 20px ;
+}
+
+.BannerImage{
+  width: auto;
+  height: 300px;
+  display:unset;
+  display:flex;
+  margin-left:200px;
+  margin-top:100px;
+  padding-bottom:50px;
+  /* border-style: dashed; */
+}
+.Breaker{
+  padding-top: 50px;
+}
+
+/* Show */
+.IndexColumns{
+  display:grid;
+  grid-template-columns:repeat(4, auto);
+  grid-gap: 8em;
+  padding-left: 200px;
+  padding-right: 200px;
+  padding-top: 50px;
+  margin-bottom: 90px;
+
+}
+.IndexTitle{
+  text-align: center ;
+}
+
+.Button{
+  padding-top: 1em;
+}
+/* Footer */
+.FooterBody{
+  background-color:#f8d9a3;
+}
+
+/* CatNew */
+.NewForm{
+  background-color: #f3aa89;
+  margin-left: 50px;
+  margin-right: 50px;
+}
+.Form{
+  margin-left: 20px;
+  padding-top: 40px ;
+  margin-right: 900px;
+  width: 200px;
+}
+.Input{
+  border-style: double;
+}
+
+.FirstInput{
+  margin-top: 30px;
+}
+
+/* .Pointer {
+  width: 200px;
+  height: 40px;
+  position: relative;
+  background: red;
+
+}
+.Pointer:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 0;
+  border-left: 20px solid white;
+  border-top: 20px solid transparent;
+  border-bottom: 20px solid transparent;
+}
+#Pointer:before {
+  content: "";
+  position: absolute;
+  right: -20px;
+  bottom: 0;
+  width: 0;
+  height: 0;
+  border-left: 20px solid red;
+  border-top: 20px solid transparent;
+  border-bottom: 20px solid transparent;
+} */
+
+/* Universal Title */
+.Title{
+  border-bottom:5px solid #d4e4dc;
+  margin-top:72px;
+
+}
+
+.Title h1{
+  display: inline-block;
+  margin:0;
+  padding:0;
+  background-color: #d4e4dc;
+  color: #222;
+  height: 50px;
+  line-height: 50px;
+  text-align:center;
+  text-align: center;
+  padding: 0px 54px;
+  font-size: 20px;
+  font-weight: 400;
+  position: relative;
+}
+
+
+.Title h1::before {
+  content:'';
+  position: absolute;
+  left:100%;
+  bottom:0;
+  height:0;
+  width:0;
+  border: 25px solid #d4e4dc;
+  border-top-color: transparent;
+  border-right-color: transparent;
+
+
+}
+

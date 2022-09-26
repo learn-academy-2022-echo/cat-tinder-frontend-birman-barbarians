@@ -4,13 +4,15 @@ import {Alert} from "reactstrap"
 const NotFound = () => {
     return (
         <>
-      <h1>Something Happened</h1>
+        <div className='Title'>
+      <h1 >Something Happened</h1>
+        </div>
   <Alert>
     <h4 className="alert-heading">
-      Something went wrong!
+      This page does not exist
     </h4>
       <p>
-        Uh Oh! This is our message that means something went wrong!
+        What a Cat-Astrophe!
       </p>
     <hr />
       <p className="mb-0">

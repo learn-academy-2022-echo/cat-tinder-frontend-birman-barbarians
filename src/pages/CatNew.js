@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import {InputGroup, InputGroupText, Input, Button} from 'reactstrap'
 import { useNavigate } from "react-router-dom"
 
+
 const CatNew = ({ createCat }) => {
     const navigate = useNavigate()
     const [newCat, setNewCat] = useState({
@@ -19,13 +20,16 @@ const CatNew = ({ createCat }) => {
         }
     return (
         <>
+        <div className='Title'>
         <h1>Add A Cat Here</h1>
-            <div>
-            <InputGroup>
-                <InputGroupText for="name">
+        </div>
+            <div className='NewForm'>
+            <InputGroup >
+
+                <InputGroupText className='FirstInput' for="name">
                     Add A Cat Name
                 </InputGroupText>
-                <Input 
+                <Input className='FirstInput'
                         name="name"
                         placeholder="Name"
                         type="text"
@@ -47,7 +51,7 @@ const CatNew = ({ createCat }) => {
                 />
             </InputGroup>
             <br />
-            <InputGroup>
+            <InputGroup >
                 <InputGroupText for="enjoys">
                     What do they like?
                 </InputGroupText>
